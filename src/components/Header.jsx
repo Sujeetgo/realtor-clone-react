@@ -23,7 +23,7 @@ const Header = () => {
     }
 
     return (
-    <div className='bg-slate-50 border-b shadow-sm sticky top-0 z-50'>
+    <div className='bg-slate-50 border-b shadow-sm sticky top-0 z-40'>
       <header className='flex justify-between items-center px-3 mx-w-6xl mx-auto'>
         <div>
             <img src="https://static.rdc.moveaws.com/images/logos/rdc-logo-default.svg" alt="realtor-logo" className='h-5 cursor-pointer'  onClick={()=>navigate('/')}/>
