@@ -4,7 +4,8 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router';
 import { toast } from 'react-toastify';
 import { db } from '../firebase';
-
+import {FcHome} from 'react-icons/fc';
+import { Link } from 'react-router-dom';
 const Profile = () => {
   const navigate = useNavigate();
   const [changeDetail, setChangeDetail] = useState(false);
@@ -64,8 +65,13 @@ const Profile = () => {
               </p>
               <p className='text-blue-600 hover:text-blue-800 transition duration-200 ease-in-out cursor-pointer' onClick={onLogOut}>Sign Out</p>
             </div>
-            
           </form>
+          <button type="submit" className='w-full bg-blue-600 text-white uppercase px-7 py-3 text-sm font-medium rounded shadow-md hover:bg-blue-700 transition duration-200 ease-in-out hover:shadow-lg active:bg-blue-800'>
+            <Link to="create-listing" className='flex justify-center items-center'>
+              <FcHome className='mr-2 text-3xl bg-red-100 rounded-full p-1 border-2'/>
+              Sell or Rent your home
+            </Link>        
+          </button>
         </div>
       </section>
     </>
